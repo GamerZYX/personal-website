@@ -1,2 +1,1 @@
-# personal-website
-Welcome to my world!
+https://gamerzyx.github.io/personal-website/
