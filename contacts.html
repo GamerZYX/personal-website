@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Yaxi Zeng | Contact</title>
+
+        <link href="style.css" rel="stylesheet" />
+
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+
+        <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Lekton:400,700' rel='stylesheet' type='text/css'>
+
+        <style>
+        	/*codes below are mainly from JQuery*/
+            body {
+                background-color: black;
+                background-image: url('img/future.jpg');
+                background-repeat: no-repeat;
+                margin: 0px auto;
+                background-size: cover;
+                background-position: top;
+            }
+
+            .react-item.react-active .typed-cursor{
+                display:inline;
+            }
+
+            .react-item.react-completed .typed-cursor{
+                display:none;
+            }
+
+            .react-item{
+                display:none;
+            }
+
+            .react-item.react-completed,
+            .react-item.react-active{
+                display:block;
+            }
+
+            .react-item input{
+                height:0;
+                width:0;
+                padding:0;
+                border:none;
+                /*block to go to new line*/
+                display:block 
+            }
+
+            /* Flashing cursor copied from http://www.mattboldt.com/demos/typed-js/ */
+            .react-item .typed-cursor{
+                display:none;
+                opacity: 1;
+                font-weight: 100;
+                -webkit-animation: blink 0.9s infinite;
+                -moz-animation: blink 0.9s infinite;
+                -ms-animation: blink 0.9s infinite;
+                -o-animation: blink 0.9s infinite;
+                animation: blink 0.9s infinite;
+            }
+            @-keyframes blink{
+                0% { opacity:1; }
+                50% { opacity:0; }
+                100% { opacity:1; }
+            }
+            @-webkit-keyframes blink{
+                0% { opacity:1; }
+                50% { opacity:0; }
+                100% { opacity:1; }
+            }
+            @-moz-keyframes blink{
+                0% { opacity:1; }
+                50% { opacity:0; }
+                100% { opacity:1; }
+            }
+            @-ms-keyframes blink{
+                0% { opacity:1; }
+                50% { opacity:0; }
+                100% { opacity:1; }
+            }
+            @-o-keyframes blink{
+                0% { opacity:1; }
+                50% { opacity:0; }
+                100% { opacity:1; }
+            }
+
+            html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+
+p{
+    margin:10px;
+}
+
+h1{
+    text-align:center;
+    color:white;
+    font-size: 40px;
+    text-align: center;
+}
+
+h2{
+    font-size:15px;
+    margin:0 auto;   
+    padding:5px;
+    color:#333;
+    background:#ccc;
+    max-width:1000px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    text-shadow:0 1px 0 #fff;
+}
+
+.react-completed{
+    color:#444;
+    transition:color 500ms;
+    -webkit-transition:color 500ms
+}
+
+.form-react{  
+    max-width:1000px;
+    min-height:500px;
+    padding:40px;
+    margin:0 auto;
+    font-size:150%;
+    line-height:100%;
+    text-align:left;
+    color:#eee;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-width:0;
+    box-shadow:0 50px 30px -40px #555,inset 0 0 10px #111;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    text-align: center;
+}
+
+.result-react{
+    max-width:1000px;
+    margin:30px auto;
+    color:green;
+}
+
+        </style>
+    </head>
+
+    <body>
+            <div id="nav-wrapper">
+        <div id="nav">
+                    <a href="index.html">About</a>
+                    <a href="experiences.html">Experience</a>
+                    <a href="projects.html">Projects</a>
+                    <a id = "active" href="contacts.html">Contact</a>
+        </div> <!-- #nav -->
+    </div>
+
+        <div class="form-react">
+            <h1>
+                Contact me!
+            </h1>
+            <p>> Hi! How are you?</p>
+
+            <p>> What's your name?</p>
+
+            <p>> What's your e-mail address?</p>
+
+            <p>> Is there anything you want to say?</p>
+
+            <p>> Is that all?</p>
+
+            <div class="end-message"></div>
+        </div>
+
+        <div class="result-react">
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/form.js"></script>
+        <script>
+        var formValues;
+            $('.form-react').formreact({
+                selector:'.q-form',
+                wrapResult:'.result-react',
+                endMsg:'<p>Thank you!&#9786;</p>',
+                wrapEnd:'.form-react .end-message',
+                resultMsg:function(formValues){
+                    return '<p>>> Result: ' + formValues + '</p>';
+                }
+            });
+        </script>
+
+    <div id="footer">
+	    <a href="https://www.linkedin.com/in/yaxi-zeng/"  target="_blank">
+	        <img id="linkedin" src="./img/linkedin.png" alt="linkedin icon">
+	    </a>
+	    <a href="https://github.com/GamerZYX"  target="_blank">
+	        <img src="./img/github.png" alt="github icon">
+	    </a>
+	   <a href = "mailto:yaxizeng@usc.edu">
+            <img src="./img/mail.png" alt="email icon">
+        </a>
+	</div>
+
+        
+    </body>
+</html>
